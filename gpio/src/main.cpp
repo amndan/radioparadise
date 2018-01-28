@@ -56,6 +56,7 @@ int main(int argc, char** argv)
   }
   
   system("mpc play");
+  system("mpc volume 100");
 
   while(1)
   {
@@ -70,10 +71,12 @@ int main(int argc, char** argv)
       if(state == 5)
       {
         system("mpc next");
+        std::cout << "next" << std::endl;
       }
       else if (state == 2)
       {
         system("mpc prev");
+        std::cout << "prev" << std::endl;
       }
     }
     usleep(200000);
